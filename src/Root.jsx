@@ -21,11 +21,13 @@ import SlowFood from "./views/SlowFood";
 import TimeLayout from "./components/TimeLayout";
 import { AuthContextProvider } from "./context/AuthContext";
 import ProtectedRoute from "./components/ProtectedRoute";
-import { app } from "./config/firebaseConfig";
+import { app, auth } from "./config/firebaseConfig";
+import Register from "./views/Register";
 // import VideoBackground from "./images-videos/VideoBackground";
 
 function Root() {
   console.log("app :>> ", app);
+  console.log("auth :>> ", auth);
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path="/" element={<App />} errorElement={<ErrorPage />}>
@@ -39,6 +41,7 @@ function Root() {
           }
         />
         <Route path="recipes/:recipeName" element={<Details />} />
+        <Route path="register" element={<Register />} />
         <Route path="about" element={<About />} />
         {/* Or mealtime? Like breakfast, lunch...? */}
         <Route path="recipeTime" element={<TimeLayout />}>
