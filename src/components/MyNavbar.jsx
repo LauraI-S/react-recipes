@@ -22,7 +22,7 @@ function MyNavbar() {
       <NavLink to="/recipes">Recipes</NavLink>|
       <NavLink to="/recipetime">MyRecipeTime </NavLink> |
       {user ? (
-        <Button variant="secondary" onClick={logout}>
+        <Button variant="danger" onClick={logout}>
           Logout
         </Button>
       ) : (

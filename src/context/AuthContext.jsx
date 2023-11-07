@@ -13,7 +13,9 @@ export const AuthContext = createContext(AuthInContext);
 export const AuthContextProvider = ({ children }) => {
   //!3 Declare the state & functions I want to export
   const [user, setUser] = useState(null);
-
+  const logout = () => {
+    setUser(null);
+  };
   return (
     <AuthContext.Provider value={{ user, setUser }}>
       {children}
