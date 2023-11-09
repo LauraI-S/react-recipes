@@ -23,6 +23,8 @@ import { AuthContextProvider } from "./context/AuthContext";
 import ProtectedRoute from "./components/ProtectedRoute";
 import { app, auth } from "./config/firebaseConfig";
 import Register from "./views/Register";
+import Login from "./components/Login";
+
 // import VideoBackground from "./images-videos/VideoBackground";
 
 function Root() {
@@ -42,6 +44,7 @@ function Root() {
         />
         <Route path="recipes/:recipeName" element={<Details />} />
         <Route path="register" element={<Register />} />
+        <Route path="login" element={<Login />} />
         <Route path="about" element={<About />} />
         {/* Or mealtime? Like breakfast, lunch...? */}
         <Route path="recipeTime" element={<TimeLayout />}>

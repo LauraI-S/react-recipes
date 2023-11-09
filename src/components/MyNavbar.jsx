@@ -4,7 +4,7 @@ import { AuthContext } from "../context/AuthContext";
 import { Button } from "react-bootstrap";
 
 function MyNavbar() {
-  const { user, setUser } = useContext(AuthContext);
+  const { user, setUser, logout } = useContext(AuthContext);
   console.log("user :>> ", user);
 
   const login = () => {
@@ -13,13 +13,12 @@ function MyNavbar() {
       email: "LiLu@vmi.com",
     });
   };
-  const logout = () => {
-    setUser(null);
-  };
+
   return (
     <nav>
       <NavLink to="/home">Home</NavLink>|<NavLink to="/about">About</NavLink>|
       <NavLink to="/recipes">Recipes</NavLink>|
+      <Link to="/register">Register</Link>|<Link to="/login">Login</Link>|
       <NavLink to="/recipetime">MyRecipeTime </NavLink> |
       {user ? (
         <Button variant="danger" onClick={logout}>
