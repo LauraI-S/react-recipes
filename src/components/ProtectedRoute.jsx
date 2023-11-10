@@ -14,7 +14,7 @@ function ProtectedRoute({ children }) {
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false); // Set isLoading to false when loading is completed
-    }, 2000); // Adjust the time delay as needed
+    }, 1000); // Adjust the time delay as needed
   }, []);
   // const allowAccess = useIsAuth();
 

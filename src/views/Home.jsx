@@ -8,7 +8,7 @@ function Home() {
   return (
     <>
       <h1>Home</h1>
-      <h2>Hi {user?.userName}! Welcome to the Recipe-App!</h2>
+      <h2>Hi {user?.email}! Welcome to the Recipe-App!</h2>
     </>
   );
 }

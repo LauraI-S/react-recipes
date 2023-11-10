@@ -97,12 +97,14 @@ export const AuthContextProvider = ({ children }) => {
         // User is signed in, see docs for a list of available properties
         // https://firebase.google.com/docs/reference/js/auth.user
         const uid = user.uid;
-        console.log("uid :>> ", uid);
-        console.log("user from Firebase :>> ", user);
+        console.log("loggedUser is still logged in");
+        // console.log("uid :>> ", uid);
+        // console.log("loggedUser from Firebase :>> ", user);
+        setUser(user);
         // ...
       } else {
-        // User is signed out
-        // ...
+        console.log("loggedUser is logged out :>> "); // ...
+        setUser(null);
       }
     });
   };
