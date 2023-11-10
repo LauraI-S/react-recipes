@@ -1,0 +1,12 @@
+.my-navbar {
+    background-color: #51454c;
+    /* Set your desired background color */
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    z-index: 1000;
+}

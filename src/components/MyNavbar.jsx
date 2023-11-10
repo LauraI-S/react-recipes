@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
 import { Button } from "react-bootstrap";
+import "./MyNavbar.css";
 
 function MyNavbar() {
   const { user, setUser, logout } = useContext(AuthContext);
@@ -15,7 +16,7 @@ function MyNavbar() {
   // };
 
   return (
-    <nav>
+    <nav className="my-navbar">
       <NavLink to="/home">Home</NavLink>|<NavLink to="/about">About</NavLink>|
       <NavLink to="/recipes">Recipes</NavLink>|
       <Link to="/register">Register</Link>|<Link to="/login">Login</Link>|
