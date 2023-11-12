@@ -21,7 +21,14 @@ function ProtectedRoute({ children }) {
   return (
     <>
       {isLoading ? (
-        <h1>Loading... {}</h1>
+        <h1>
+          {/* Loading...{" "} */}
+          {
+            <div class="spinner-border" role="status">
+              <span class="sr-only"></span>
+            </div>
+          }
+        </h1>
       ) : allowAccess ? (
         children
       ) : (

@@ -31,9 +31,16 @@ function Chat() {
     console.log("formatedDate :>> ", formatedDate);
     return formatedDate;
   };
+
   const submitMessage = () => {
     console.log("textMsg :>> ", textMsg);
+    const newChatMsg = {
+      author: user.email,
+      text: textMsg,
+      date: new Date(),
+    };
   };
+
   useEffect(() => {
     getMessages();
   }, []);

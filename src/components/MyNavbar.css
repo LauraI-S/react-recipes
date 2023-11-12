@@ -1,6 +1,61 @@
 .my-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 2%;
+    width: 100%;
+    z-index: 2;
+}
+
+.logo {
+    margin-right: 20%;
+    
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.navbar-nav {
+    margin-right: auto;
+}
+
+.nav-link {
+    margin-right: 10rem;
+    color: white;
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+}
+
+.form-inline {
+    display: flex;
+    align-items: center;
+}
+
+.form-control {
+    margin-right: 10px;
+}
+
+.btn-outline-light {
+    color: white;
+    border-color: white;
+}
+
+.btn-outline-light:hover {
+    background-color: white;
+    color: #343a40;
+    /* Change to your preferred text color */
+}
+
+
+
+/* .my-navbar {
     background-color: #51454c;
-    /* Set your desired background color */
     padding: 10px;
     position: fixed;
     top: 0;
@@ -9,4 +64,4 @@
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     z-index: 1000;
-}
+} */

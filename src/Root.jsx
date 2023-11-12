@@ -10,7 +10,7 @@ import {
 } from "react-router-dom";
 import "./App.css";
 import App from "./App";
-import About from "./views/About";
+// import About from "./views/About";
 import Home from "./views/Home";
 import Recipes from "./views/Recipes";
 import ErrorPage from "./views/ErrorPage";
@@ -55,7 +55,7 @@ function Root() {
             </ProtectedRoute>
           }
         />
-        <Route path="about" element={<About />} />
+        {/* <Route path="about" element={<About />} /> */}
         {/* Or mealtime? Like breakfast, lunch...? */}
         <Route path="recipeTime" element={<TimeLayout />}>
           <Route index element={<RecipeTime />} />
