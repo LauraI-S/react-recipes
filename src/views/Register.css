@@ -1,0 +1,28 @@
+
+
+.registration-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.loginImg {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.signUpForm {
+    margin-top: 20px;
+}
+
+.searchInputBox {
+    margin-bottom: 15px;
+}
+
+.hide-password {
+    display: block;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #555;
+}

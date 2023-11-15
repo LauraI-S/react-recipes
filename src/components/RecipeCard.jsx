@@ -11,6 +11,7 @@ import {
 import Button from "react-bootstrap/Button";
 import { Col } from "react-bootstrap";
 import MyModal from "./MyModal";
+// import Favorite from "./Favorite.jsx";
 
 function RecipeCard({ recipe, handleOpen }) {
   //boolean variable that defines if the modal is open or not (initially should be closed)

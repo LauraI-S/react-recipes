@@ -6,7 +6,11 @@ import "./MyNavbar.css";
 import logo from "../images-videos/logo.jpg";
 
 function MyNavbar() {
-  const { user, logout } = useContext(AuthContext);
+  const { user, logout, userName } = useContext(AuthContext);
+  const handleLogout = () => {
+    logout();
+    navigate("/");
+  };
 
   return (
     <Navbar bg="light" expand="lg" variant="light" className="my-navbar">
@@ -16,8 +20,8 @@ function MyNavbar() {
             src={logo}
             className="logo img-fluid"
             alt="Logo"
-            width="100"
-            height="100"
+            width="50"
+            height="50"
           />
         </Navbar.Brand>
       </Link>
@@ -30,12 +34,12 @@ function MyNavbar() {
           <Link to="/register">Register</Link>
           <Link to="/login">Login</Link>
           <NavLink to="/chat">Chat </NavLink>
-          <NavLink to="/recipetime">MyRecipeTime </NavLink>
+          {/* <NavLink to="/recipetime">MyRecipeTime </NavLink> */}
         </Nav>
-        <Form inline="true">
+        {/* <Form inline="true">
           <FormControl type="text" placeholder="Search" className="mr-sm-2" />
           <Button variant="outline-light">Search</Button>
-        </Form>
+        </Form> */}
         <Button variant="danger" onClick={logout}>
           Logout
         </Button>

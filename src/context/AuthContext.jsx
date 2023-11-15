@@ -5,13 +5,13 @@ import {
   signInWithEmailAndPassword,
   signOut,
 } from "firebase/auth";
-import { createContext, useState, ReactNode } from "react";
+import { createContext, useState, useEffect } from "react";
 import { auth } from "../config/firebaseConfig";
-import { useEffect } from "react";
 
 // Definiere den anfänglichen Authentifizierungszustand
 const AuthInContext = {
   user: null,
+  userName: "",
   setUser: () => console.log("context not initialised :>> "),
   logout: () => console.log("context not initialised"),
   register: () => console.log("context not initialised"),
@@ -25,9 +25,16 @@ export const AuthContext = createContext(AuthInContext);
 export const AuthContextProvider = ({ children }) => {
   // Definiere den Benutzerzustand und die zugehörigen Funktionen
   const [user, setUser] = useState(null);
+  const [userName, setUserName] = useState("");
 
   // Funktion zur Benutzerregistrierung
-  const register = async (email, password) => {
+  const register = async (displayName, email, password) => {
+    console.log(
+      "displayName, email, password :>> ",
+      displayName,
+      email,
+      password
+    );
     try {
       const userCredential = await createUserWithEmailAndPassword(
         auth,
@@ -35,6 +42,11 @@ export const AuthContextProvider = ({ children }) => {
         password
       );
       const registeredUser = userCredential.user;
+      // setUserAndUserName(registeredUser, userName);
+      //Modify userProfile, by adding a "new" value (initially is null) to the displayName, or any other field
+      if (registeredUser) {
+        //create code to modify profile inside here
+      }
       console.log("register success: ", registeredUser);
       //REVIEW if you want to let the user already logged in after register, just set the user here
       setUser(registeredUser);
@@ -63,17 +75,6 @@ export const AuthContextProvider = ({ children }) => {
 
   // Funktion zur Abmeldung des Benutzers
   const logout = async () => {
-    // signOut(auth)
-    //   .then(() => {
-    //     // Sign-out successful.
-    //     setUser(null);
-    //     alert("you've been logged out");
-    //   })
-    //   .catch((error) => {
-    //     // An error happened.
-    //     console.log("cannot logout:>> ", error);
-    //   });
-
     //async await
     //1. create a variable that is gonna store the result of the promise when it is POSITIVELY resolved
     //2. create a try/catch block to handle the error if the promise is not fulfilled
@@ -86,6 +87,10 @@ export const AuthContextProvider = ({ children }) => {
     } catch (error) {
       console.log("cannot logout:>> ", error);
     }
+  };
+  const setUserAndUserName = (user, name) => {
+    setUser(user);
+    setUserName(name);
   };
 
   const checkWhichUserIsLogged = () => {
@@ -115,7 +120,17 @@ export const AuthContextProvider = ({ children }) => {
 
   // Stelle den Authentifizierungszustand und die Funktionen über den Kontext bereit
   return (
-    <AuthContext.Provider value={{ user, setUser, logout, register, login }}>
+    <AuthContext.Provider
+      value={{
+        user,
+        setUser,
+        logout,
+        register,
+        login,
+        userName,
+        setUserAndUserName,
+      }}
+    >
       {children}
     </AuthContext.Provider>
   );

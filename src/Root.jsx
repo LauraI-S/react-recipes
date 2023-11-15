@@ -70,9 +70,10 @@ function Root() {
     <>
       <AuthContextProvider>
         <RouterProvider router={router} />
+
+        <Outlet />
       </AuthContextProvider>
       {/* <VideoBackground /> */}
-      <Outlet />
     </>
   );
 }

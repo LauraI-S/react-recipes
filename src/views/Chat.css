@@ -1,4 +1,4 @@
-.chatStyle {
+/* .chatStyle {
 background-color: rgb(214, 151, 151);
 display: flex;
 flex-direction: column;
@@ -8,4 +8,78 @@ border-radius: 10%;
 .messageStyle {
 border: solid, black;
 
+} */
+
+
+.chat-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+/* Input and button styling */
+.input-container {
+    display: flex;
+    align-items: center;
+}
+
+.message-input {
+    flex: 1;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+.send-button {
+    padding: 10px;
+    background-color: #f8c300;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Styling for the chat messages */
+.chatStyle {
+    margin-top: 20px;
+}
+
+.messageStyle {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+.author {
+    font-size: 14px;
+    color: #888;
+}
+
+.message-text {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.message-date {
+    font-size: 12px;
+    color: #aaa;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .message-input {
+        width: 100%;
+    }
 }

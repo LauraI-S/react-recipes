@@ -85,25 +85,37 @@ const Recipes = ({}) => {
   useEffect(() => {
     searchRecipes();
   }, [currentPage]);
+
   return (
-    <div>
-      <h1>recipes</h1>
-
-      {/* insert here a Search component) */}
-      <input type="text" value={inputText} onChange={handleInputChange} />
-
+    <div className="recipes-container">
+      <h2>
+        Congratulations! You´ve been successfully registered or logged in! enjoy
+        glutenfree recipes and if you want: find them by ingredients:
+      </h2>
+      <div className="search-bar">
+        <input
+          type="text"
+          value={inputText}
+          onChange={handleInputChange}
+          placeholder="serach by ingredient"
+        />
+      </div>
       {/* {recipes && <MyGrid recipes={filterRecipes} />} */}
-      {Array.isArray(filteredRecipes) && <MyGrid recipes={filteredRecipes} />}
-      <Button
-        variant="secondary"
-        onClick={handlePrevPage}
-        disabled={currentPage === 1}
-      >
-        Prev
-      </Button>
-      <Button variant="secondary" onClick={handleNextPage}>
-        Next
-      </Button>
+      <div className="cards-wrapper">
+        {Array.isArray(filteredRecipes) && <MyGrid recipes={filteredRecipes} />}
+      </div>{" "}
+      <div className="pagination">
+        <Button
+          variant="secondary"
+          onClick={handlePrevPage}
+          disabled={currentPage === 1}
+        >
+          Prev
+        </Button>
+        <Button variant="secondary" onClick={handleNextPage}>
+          Next
+        </Button>
+      </div>
     </div>
   );
 };

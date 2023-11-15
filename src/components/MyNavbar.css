@@ -4,6 +4,7 @@
     align-items: center;
     padding: 10px 2%;
     width: 100%;
+    color: white !important;
     z-index: 2;
 }
 
