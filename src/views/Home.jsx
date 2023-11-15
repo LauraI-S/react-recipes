@@ -5,6 +5,7 @@ import VideoBG from "../images-videos/VideoBG.mp4";
 import "../images-videos/VideoBG.css";
 import { Link } from "react-router-dom";
 import { Button } from "react-bootstrap";
+import "./Home.css";
 
 //!Subscribe Home to the Context!
 
@@ -13,10 +14,9 @@ function Home() {
   return (
     <>
       <div className="content">
-        <h1></h1>
-        <h2>
+        <h2 className="header">
           Hey {displayUser || (user && user.email)}! Ready to enjoy a
-          gluten-free life with our exclusive recipes?
+          gluten-free meal with our exclusive recipes?
           <span>
             <Link to="/login">
               <Button variant="light" className="login-button">

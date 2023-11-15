@@ -6,7 +6,7 @@ import "./MyNavbar.css";
 import logo from "../images-videos/logo.jpg";
 
 function MyNavbar() {
-  const { user, logout, userName } = useContext(AuthContext);
+  const { user, logout, displayUser } = useContext(AuthContext);
   const handleLogout = () => {
     logout();
     navigate("/");
@@ -20,8 +20,8 @@ function MyNavbar() {
             src={logo}
             className="logo img-fluid"
             alt="Logo"
-            width="50"
-            height="50"
+            width="60"
+            height="60"
           />
         </Navbar.Brand>
       </Link>
@@ -29,17 +29,11 @@ function MyNavbar() {
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
           <NavLink to="/home">Home</NavLink>
-          {/* <NavLink to="/about">About</NavLink>| */}
           <NavLink to="/recipes">Recipes</NavLink>
           <Link to="/register">Register</Link>
           <Link to="/login">Login</Link>
           <NavLink to="/chat">Chat </NavLink>
-          {/* <NavLink to="/recipetime">MyRecipeTime </NavLink> */}
         </Nav>
-        {/* <Form inline="true">
-          <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-          <Button variant="outline-light">Search</Button>
-        </Form> */}
         <Button variant="danger" onClick={logout}>
           Logout
         </Button>

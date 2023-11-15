@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
 }
 
 .search-bar {
@@ -21,14 +22,10 @@
     gap: 10px;
 }
 
-/* Adjust the card styling */
-.flip-card {
-    margin: 10px;
-    /* Reduced spacing between cards */
-}
+
 
 .flip-card {
-    background-color: #fff;
+    background-color: rgb(230, 190, 190);
     width: 300px;
     height: 400px;
     margin: 10px;
@@ -36,7 +33,7 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     perspective: 1000px;
-    /* Add the 3D effect */
+    /* this adds the 3D effect */
     cursor: pointer;
     transition: transform 0.5s;
 }
@@ -79,7 +76,7 @@
 
 /* Style the back side */
 .flip-card-back {
-    background-color: rosybrown;
+    background-color: whitesmoke
     color: #fff;
     transform: rotateY(180deg);
     display: flex;

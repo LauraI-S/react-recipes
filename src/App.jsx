@@ -13,7 +13,7 @@ import { AuthContext } from "./context/AuthContext";
 const App = () => {
   const location = useLocation();
   const navigate = useNavigate();
-  const { userName, logout, user } = useContext(AuthContext);
+  const { displayUser, logout, user } = useContext(AuthContext);
 
   useEffect(() => {
     if (location.pathname == "/") {
@@ -24,9 +24,10 @@ const App = () => {
   return (
     <>
       <MyNavbar />
+      <div>
+        <p>Hey {displayUser || (user && user.email)}!</p>
+      </div>
       <div className="content">
-        <p>Hi {userName}! Welcome to theCook´cinelle Recipe App</p>
-        <h1> coccinelle </h1>
         {/* <h3>replace this with navbar, this will be displayed on every page</h3> */}
       </div>
       <Outlet />

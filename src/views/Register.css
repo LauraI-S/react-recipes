@@ -1,28 +1,83 @@
-
-
 .registration-container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
+    max-width: 300px;
+    margin: auto;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
 }
 
-.loginImg {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 20px;
-}
-
-.signUpForm {
-    margin-top: 20px;
-}
-
-.searchInputBox {
+h1 {
+    text-align: center;
+    color: #333;
+    font-size: 24px;
     margin-bottom: 15px;
 }
 
+.salad {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.salad img {
+    max-width: 100%;
+    height: auto;
+}
+
+.searchInputBox {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.password-container {
+    position: relative;
+}
+
 .hide-password {
-    display: block;
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #007bff;
+    font-size: 12px;
+}
+
+.signupbtn {
+    width: 100%;
+    padding: 8px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.signupbtn:hover {
+    background-color: #45a049;
+}
+
+p {
+    text-align: center;
     font-size: 14px;
-    line-height: 1.5;
+    margin-top: 10px;
+}
+
+.resetButton {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.resetButton:hover {
+    text-decoration: underline;
+}
+
+.checkbox-label {
+    font-size: 12px;
     color: #555;
 }

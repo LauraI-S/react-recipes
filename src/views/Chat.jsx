@@ -94,7 +94,7 @@ function Chat() {
 
   return (
     <div className="chat-container">
-      <h1>Share your experience!Which recipe did you like?</h1>
+      <h1>Share your experience!Which recipe did you like most?</h1>
       <div className="input-container">
         <input
           type="text"

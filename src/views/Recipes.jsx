@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import MyModal from "../components/MyModal";
 import MyGrid from "../components/MyGrid";
 import { Button } from "react-bootstrap";
+import "./Recipes.css";
 
 const Recipes = ({}) => {
   const apiKey = "5c8d5c4799534b758b1811eac51e1c6c";
