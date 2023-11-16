@@ -8,12 +8,12 @@
 //-TODO decide & style Navbar
 //-TODO style Loading-picture?
 //TODO implement user-name and welcome him/her
-//TODO Errormessageges coming in from firebase to be displayed on the screen?
+//TODO Errormessages coming in from firebase to be displayed on the screen?
 // -TODO Hide Login-button in navbar
 //TODO show Modal in protected route
 //TODO make Register-link disappear if user is registered
 //TODO Chat
-//TODO If someone is logged in let him/her know!
+//-TODO If someone is logged in let him/her know!
 //TODO create a chat underneatch the recipe-cards
 //TODO style modals
 //TODO IMPLEMENT USERNAME!

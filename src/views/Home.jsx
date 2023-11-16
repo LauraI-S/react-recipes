@@ -8,16 +8,16 @@ import { Button } from "react-bootstrap";
 import "./Home.css";
 
 //!Subscribe Home to the Context!
-
 function Home() {
   const { user, displayUser } = useContext(AuthContext);
   return (
     <>
       <div className="content">
         <h2 className="header">
-          Hey {displayUser || (user && user.email)}! Ready to enjoy a
+          Hey {displayUser || (user && user.email)}! <br></br>Ready to enjoy a
           gluten-free meal with our exclusive recipes?
           <span>
+            <br></br>
             <Link to="/login">
               <Button variant="light" className="login-button">
                 Login

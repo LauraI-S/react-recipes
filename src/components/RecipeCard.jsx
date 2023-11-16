@@ -1,23 +1,12 @@
 import React from "react";
 import "./RecipeCards.css";
 import { useState } from "react";
-import {
-  useNavigate,
-  useLocation,
-  Link,
-  NavLink,
-  Outlet,
-} from "react-router-dom";
+import { Link } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import { Col } from "react-bootstrap";
 import MyModal from "./MyModal";
-// import Favorite from "./Favorite.jsx";
 
 function RecipeCard({ recipe, handleOpen }) {
-  //boolean variable that defines if the modal is open or not (initially should be closed)
-  //function to open de modal (changing the value of the previous variable to the oppiste)
-  // function to close the modal (doing the opposite of the previous function)
-  //which information needs to receive  the modal? : 1.info about the recipe. 2.the variable that defines if it should open or not. 3. the function to close it
   const [show, setShow] = useState(false);
   const handleShow = () => setShow(true);
   const handleClose = () => setShow(false);

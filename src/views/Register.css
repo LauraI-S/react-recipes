@@ -1,11 +1,11 @@
 .registration-container {
-    max-width: 300px;
+    max-width: 80%;
     margin: auto;
     padding: 15px;
     border: 1px solid #ccc;
-    border-radius: 6px;
+    /* border-radius: 6px; */
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
+    /* background-color: #fff; */
 }
 
 h1 {
@@ -21,7 +21,7 @@ h1 {
 }
 
 .salad img {
-    max-width: 100%;
+    max-width: 80%;
     height: auto;
 }
 
@@ -37,19 +37,16 @@ h1 {
 }
 
 .hide-password {
-    position: absolute;
-    top: 50%;
-    right: 8px;
-    transform: translateY(-50%);
+
     cursor: pointer;
-    color: #007bff;
-    font-size: 12px;
+    color:rosybrown;
+    font-size: 15px;
 }
 
 .signupbtn {
     width: 100%;
     padding: 8px;
-    background-color: #4caf50;
+    background-color: rosybrown;
     color: #fff;
     border: none;
     border-radius: 4px;
@@ -58,7 +55,7 @@ h1 {
 }
 
 .signupbtn:hover {
-    background-color: #45a049;
+    background-color: red;
 }
 
 p {
@@ -78,6 +75,24 @@ p {
 }
 
 .checkbox-label {
-    font-size: 12px;
+    font-size: 19px;
     color: #555;
+}
+.ckeckbox-box {
+    display: flex;
+    align-items: center;
+}
+
+.hamburger {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.hamburger img {
+    width: 100%;
+    max-width: 2000px;
+    height: auto;
+    border-radius: 8px;
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
+    margin-top: 10px;
 }

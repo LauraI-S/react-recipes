@@ -42,10 +42,12 @@ export const AuthContextProvider = ({ children }) => {
         password
       );
       const registeredUser = userCredential.user;
-      // setUserAndUserName(registeredUser, userName);
+      setUserAndUserName(registeredUser, userName);
       //Modify userProfile, by adding a "new" value (initially is null) to the displayName, or any other field
+      // const updateProfile = displayName(null);
+
       if (registeredUser) {
-        //create code to modify profile inside here
+        // await updateProfile(registeredUser, { displayName: displayName }); //create code to modify profile inside here
       }
       console.log("register success: ", registeredUser);
       //REVIEW if you want to let the user already logged in after register, just set the user here

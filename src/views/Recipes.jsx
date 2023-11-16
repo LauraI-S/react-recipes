@@ -5,8 +5,7 @@ import { Button } from "react-bootstrap";
 import "./Recipes.css";
 
 const Recipes = ({}) => {
-  const apiKey = "5c8d5c4799534b758b1811eac51e1c6c";
-  //const apiKey = "e7eff027ad8b4b8c8338c713f0a6463e"; //yahoo api-key
+  const apiKey = import.meta.env.VITE_API_KEY;
   const [recipes, setRecipes] = useState([]);
   const [show, setShow] = useState(false);
   const [chosenRecipe, setChosenRecipe] = useState(null);
@@ -25,8 +24,6 @@ const Recipes = ({}) => {
   const ingredients = "tomato";
 
   const url = new URL(
-    //`https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey}&diet=glutenFree&maxReadyTime=30&addRecipeInformation=true&includeIngredients=true&instructionsRequired=true&ingredients=${ingredients}`
-    //`https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey}&intolerances=gluten&offset=30&number=24&addRecipeInformation=true&includeIngredients=true&instructionsRequired=true`
     `https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey}&intolerances=gluten&offset=${
       (currentPage - 1) * itemsPerPage
     }&number=${itemsPerPage}&addRecipeInformation=true&includeIngredients=true&instructionsRequired=true`
@@ -90,8 +87,8 @@ const Recipes = ({}) => {
   return (
     <div className="recipes-container">
       <h2>
-        Congratulations! You´ve been successfully registered or logged in! enjoy
-        glutenfree recipes and if you want: find them by ingredients:
+        Welcome to the Cook`cinelle recipe-App! Enjoy glutenfree recipes and if
+        you want: find them by ingredients:
       </h2>
       <div className="search-bar">
         <input

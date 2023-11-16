@@ -1,6 +1,5 @@
 import React from "react";
 import "./RecipeCards.css";
-import { State } from "react";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 
@@ -19,9 +18,14 @@ function MyModal({ recipe, handleClose, show }) {
             alt={recipe.title}
             style={{ width: "auto", height: "auto" }}
           />
+          <div>{recipe.title}</div>
           <div>Dish Types: {recipe.dishTypes.join(", ")}</div>
           <div>Ready in: {recipe.readyInMinutes} minutes</div>
-          <div>Ready in: {recipe.summary} minutes</div>
+          <ol>
+            {recipe.analyzedInstructions[0].steps.map((step) => (
+              <li key={step.number}>{step.step}</li>
+            ))}
+          </ol>
         </Modal.Body>
 
         <Modal.Footer>

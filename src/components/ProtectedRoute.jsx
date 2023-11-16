@@ -3,7 +3,7 @@ import { AuthContext } from "../context/AuthContext";
 import { isUserAuth } from "../utilities/isUserAuth.js";
 import { Navigate, useNavigate } from "react-router-dom";
 import { Button } from "react-bootstrap";
-// import useIsAuth from "../hooks/useIsAuth";
+import hamburger from "../images-videos/hamburger.jpg";
 
 function ProtectedRoute({ children }) {
   // Bouncer, that checks you and let´s you in... or not
@@ -36,14 +36,17 @@ function ProtectedRoute({ children }) {
       ) : allowAccess ? (
         children
       ) : (
-        <div>
+        <div className="registration-container">
           <h2>
             Hungry and want to Chat about our gluten-free recipes???? Please
-            login first....
+            <Button variant="secondary" onClick={handleLoginClick}>
+              login
+            </Button>{" "}
+            first....
           </h2>
-          <Button variant="secondary" onClick={handleLoginClick}>
-            Login
-          </Button>
+          <div className="hamburger">
+            <img src={hamburger} alt="hamburger" />
+          </div>
         </div>
       )}
     </>

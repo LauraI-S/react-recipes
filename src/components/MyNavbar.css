@@ -10,7 +10,7 @@
 
 .logo {
     margin-right: 20%;
-    
+
 }
 
 .navbar-brand {
@@ -50,19 +50,4 @@
 .btn-outline-light:hover {
     background-color: white;
     color: #343a40;
-    /* Change to your preferred text color */
 }
-
-
-
-/* .my-navbar {
-    background-color: #51454c;
-    padding: 10px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    z-index: 1000;
-} */

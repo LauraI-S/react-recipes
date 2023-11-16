@@ -4,7 +4,6 @@ import { Button, Form } from "react-bootstrap";
 import salad from "../images-videos/salad.jpg";
 import "./Register.css";
 import { AuthContext } from "../context/AuthContext";
-import { onAuthStateChanged } from "firebase/auth"; //this should listen to the changed authstate
 
 function Register() {
   const { register } = useContext(AuthContext);
@@ -76,7 +75,7 @@ function Register() {
         </div>
         <form className="signUpForm" onSubmit={handleSignUp}>
           <p>Fill in the information below to sign up:</p>
-          <label htmlFor="username">Username:</label>
+          {/* <label htmlFor="username">Username:</label>
           <input
             onChange={handleDisplayNameEntry}
             className="searchInputBox"
@@ -84,7 +83,7 @@ function Register() {
             placeholder="Choose username..."
             name="username"
           />
-          <br />
+          <br /> */}
           <label htmlFor="email">Email:</label>
           <input
             onChange={handleEmailEntry}
@@ -123,18 +122,16 @@ function Register() {
       </p>
       <Form>
         {["checkbox"].map((type) => (
-          <div key={`default-${type}`} className="mb-3">
+          <div key={`default`} className="ckeckbox-box">
             <Form.Check
               type={type}
-              id={`default-${type}`}
+              id={`default`}
               label={
                 <span className="checkbox-label">
                   Yes please, send me tasty emails! I'd like to receive news and
-                  exclusive offers from Jamie Oliver Limited about Jamie's
-                  businesses, including books, TV shows, restaurants, products,
-                  commercial partners, and campaigning activities. By signing
-                  up, you agree to our Terms of Use. Learn how we collect, use,
-                  and share your data in our Privacy Policy.
+                  exclusive offers from the Cook`cinelle. By signing up, you
+                  agree to our Terms of Use. Learn how we collect, use, and
+                  share your data in our Privacy Policy.
                 </span>
               }
             />
